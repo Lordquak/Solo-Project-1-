@@ -303,7 +303,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.55, y: 0.65, z: 33.7}
+  m_LocalPosition: {x: 0, y: 1.937, z: 32.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -472,6 +472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1590130314}
   - component: {fileID: 1590130313}
+  - component: {fileID: 1590130315}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -522,8 +523,28 @@ Transform:
   - {fileID: 1192054199}
   - {fileID: 1968822811}
   - {fileID: 1116440789}
+  - {fileID: 2030797262}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1590130315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590130312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deec99739f62f8c4a9d6deab2691f232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 7
+  groundDrag: 0
+  playerHeight: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  orientation: {fileID: 1968822811}
 --- !u!1 &1709990870
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,7 +733,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030797260}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4cdf170149d4f048841561b9b4ea72e, type: 3}
   m_Name: 
@@ -727,12 +748,12 @@ Transform:
   m_GameObject: {fileID: 2030797260}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.55, y: 0.6500001, z: 1.3100014}
+  m_LocalPosition: {x: 0, y: -2.85, z: -32.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 963194228}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1590130314}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -740,5 +761,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 705507995}
   - {fileID: 1709990875}
-  - {fileID: 2030797262}
   - {fileID: 1590130314}
