@@ -321,8 +321,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9daff62a41546784189a58b14fcb9354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 1000
-  sensY: 1000
+  sensX: 2000
+  sensY: 2000
   orientation: {fileID: 1968822811}
 --- !u!1 &1116440788
 GameObject:
@@ -516,7 +516,7 @@ Transform:
   m_GameObject: {fileID: 1590130312}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.55, y: 3.5, z: 33.7}
+  m_LocalPosition: {x: -24.37, y: 3.5, z: 33.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -539,11 +539,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7
-  groundDrag: 0
-  playerHeight: 0
+  groundDrag: 5
+  jumpForce: 12
+  jumpCooldown: 0.25
+  airMultiplier: 0.4
+  jumpKey: 32
+  playerHeight: 2
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   orientation: {fileID: 1968822811}
 --- !u!1 &1709990870
 GameObject:
@@ -558,8 +562,8 @@ GameObject:
   - component: {fileID: 1709990873}
   - component: {fileID: 1709990872}
   - component: {fileID: 1709990871}
-  m_Layer: 0
-  m_Name: Floor
+  m_Layer: 6
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -633,7 +637,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4629456db0ccdad40bfd3965287fc6d2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -673,7 +677,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.4043, y: 0.5715622, z: 2.3832}
-  m_LocalScale: {x: 185.12183, y: 1.2515085, z: 162.02151}
+  m_LocalScale: {x: 63.43199, y: 1.2515085, z: 89.06971}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
