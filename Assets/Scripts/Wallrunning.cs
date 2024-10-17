@@ -4,45 +4,29 @@ using UnityEngine;
 
 public class Wallrunning : MonoBehaviour
 {
-    [Header("Wallrunning")]
-    public LayerMask whatIsWall;
-    public LayerMask whatIsGround;
-    public float wallRunForce;
-    public float maxWallRunTime;
-    private float wallRunTimer;
+    public LayerMask whaIsWall;
+    public float wallrunForce, maxWallrunTime, maxWallSpeed;
+    bool isWallRight, isWallLeft;
+    bool isWallRunning;
+    public float maxWallRunCameraTilt, wallrunCameraTilt;
 
-    [Header("Input")]
-    private float horizontalInput;
-    private float verticalInput;
-
-    [Header("Detection")]
-    public float wallCheckDistance;
-    public float minJumpHeight;
-    private RaycastHit LeftWallhit;
-    private RaycastHit RightWallhit;
-    private bool wallLeft;
-    private bool wallRight;
-
-    [Header("References")]
-    public Transform orientation;
-    private PlayerMovement pm;
-    private Rigidbody rb;
-
-    private void Start()
+    private void WallRunInput()
     {
-        rb = GetComponent<Rigidbody>();
-        pm = GetComponent<PlayerMovement>();
+        if (Input.GetKey(KeyCode.D) && isWallRight) StartWallRun();
+        if (Input.GetKey(KeyCode.A) && isWallLeft) StartWallRun();
     }
+    private void StartWallRun()
+    {
+        rb
+    }
+    private void StopWallRun()
+    {
 
+    }
     private void CheckForWall()
     {
-        wallRight = Physics.Raycast(transform.position, orientation.right, out RightWallhit, wallCheckDistance, whatIsWall);
-        wallLeft = Physics.Raycast(transform.position, -orientation.right, out LeftWallhit, wallCheckDistance, whatIsWall);
-
+        isWallRight = Physics.Raycast(transform.position, DeviceOrientation.LandscapeRight, 1f, whatIsWall);
+        isWallRight = Physics.Raycast(transform.position, DeviceOrientation.LandscapeRight, 1f, whatIsWall);
     }
 
-    private bool AboveGround()
-    {
-        return !Physics.Raycast(transform.position, Vector3.down, minJumpHeight, whatIsGround);
-    }
 }
