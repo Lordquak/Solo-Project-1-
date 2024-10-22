@@ -74,7 +74,8 @@ public class PlayerMovement2 : MonoBehaviour
     }
     private void StopWallRun()
     {
-
+        rb.useGravity = true;
+        isWallRunning = false;
     }
     private void CheckForWall()
     {
@@ -82,6 +83,7 @@ public class PlayerMovement2 : MonoBehaviour
         isWallLeft = Physics.Raycast(transform.position, orientation.right, 1f, whatIsWall);
 
         if (!isWallLeft && !isWallRight) StopWallRun();
+       
     }
 
     void Awake()
@@ -125,6 +127,8 @@ public class PlayerMovement2 : MonoBehaviour
             StartCrouch();
         if (Input.GetKeyUp(KeyCode.LeftControl))
             StopCrouch();
+
+       
     }
 
     private void StartCrouch()

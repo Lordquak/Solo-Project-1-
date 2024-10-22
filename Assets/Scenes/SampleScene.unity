@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 76777047}
   - component: {fileID: 76777046}
   - component: {fileID: 76777045}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +342,6 @@ GameObject:
   m_Component:
   - component: {fileID: 399933776}
   - component: {fileID: 399933774}
-  - component: {fileID: 399933773}
   - component: {fileID: 399933777}
   - component: {fileID: 399933778}
   m_Layer: 0
@@ -352,27 +351,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &399933773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 399933772}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deec99739f62f8c4a9d6deab2691f232, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 399933774}
-  speed: 12
-  gravity: -16
-  jumpHeight: 3
-  groundCheck: {fileID: 1694483065}
-  groundDistance: 0.4
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!143 &399933774
 CharacterController:
   m_ObjectHideFlags: 0
@@ -415,6 +393,7 @@ Transform:
   - {fileID: 877538049}
   - {fileID: 963194228}
   - {fileID: 1694483065}
+  - {fileID: 850622363}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &399933777
@@ -451,11 +430,32 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399933772}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac20a781855c3374a9a7a6b5f7c0bec2, type: 3}
+  m_Script: {fileID: 11500000, guid: deec99739f62f8c4a9d6deab2691f232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCam: {fileID: 963194228}
+  orientation: {fileID: 850622363}
+  moveSpeed: 4500
+  maxSpeed: 20
+  grounded: 1
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  counterMovement: 0.175
+  maxSlopeAngle: 35
+  slideForce: 400
+  slideCounterMovement: 0.2
+  jumpForce: 550
+  whatIsWall:
+    serializedVersion: 2
+    m_Bits: 256
+  wallrunForce: 3
+  maxWallrunTime: 5
+  maxWallSpeed: 5
+  maxWallRunCameraTilt: 2
+  wallrunCameraTilt: 1
 --- !u!1 &610957053
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,7 +506,7 @@ GameObject:
   - component: {fileID: 615114984}
   - component: {fileID: 615114983}
   - component: {fileID: 615114982}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -798,6 +798,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &850622362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 850622363}
+  m_Layer: 0
+  m_Name: orientation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &850622363
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850622362}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.028, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 399933776}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &877205436
 GameObject:
   m_ObjectHideFlags: 0
