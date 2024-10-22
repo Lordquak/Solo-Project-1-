@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Wallrunning : MonoBehaviour
 {
-    public LayerMask whaIsWall;
+    public LayerMask whatIsWall;
     public float wallrunForce, maxWallrunTime, maxWallSpeed;
     bool isWallRight, isWallLeft;
     bool isWallRunning;

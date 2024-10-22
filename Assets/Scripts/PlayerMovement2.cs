@@ -45,6 +45,45 @@ public class PlayerMovement2 : MonoBehaviour
     private Vector3 normalVector = Vector3.up;
     private Vector3 wallNormalVector;
 
+    public LayerMask whatIsWall;
+    public float wallrunForce, maxWallrunTime, maxWallSpeed;
+    bool isWallRight, isWallLeft;
+    bool isWallRunning;
+    public float maxWallRunCameraTilt, wallrunCameraTilt;
+
+    private void WallRunInput()
+    {
+        if (Input.GetKey(KeyCode.D) && isWallRight) StartWallRun();
+        if (Input.GetKey(KeyCode.A) && isWallLeft) StartWallRun();
+    }
+    private void StartWallRun()
+    {
+        rb.useGravity = false;
+        isWallRunning = true;
+
+        if(rb.velocity.magnitude <= maxWallSpeed)
+        {
+            rb.AddForce(orientation.forward * wallrunForce * Time.deltaTime);
+
+            //Make sure Player sticks to wall
+            if (isWallRight)
+                rb.AddForce(orientation.right * wallrunForce / 5 * Time.deltaTime);
+            else
+                rb.AddForce(-orientation.right * wallrunForce / 5 * Time.deltaTime);
+        }
+    }
+    private void StopWallRun()
+    {
+
+    }
+    private void CheckForWall()
+    {
+        isWallRight = Physics.Raycast(transform.position, orientation.right, 1f, whatIsWall);
+        isWallLeft = Physics.Raycast(transform.position, orientation.right, 1f, whatIsWall);
+
+        if (!isWallLeft && !isWallRight) StopWallRun();
+    }
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();

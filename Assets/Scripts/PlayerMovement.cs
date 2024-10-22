@@ -10,10 +10,35 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 12f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
-
+    
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+
+    public LayerMask whatIsWall;
+    public float wallrunForce, maxWallrunTime, maxWallSpeed;
+    bool isWallRight, isWallLeft;
+    bool isWallRunning;
+    public float maxWallRunCameraTilt, wallrunCameraTilt;
+
+    private void WallRunInput()
+    {
+        if (Input.GetKey(KeyCode.D) && isWallRight) StartWallRun();
+        if (Input.GetKey(KeyCode.A) && isWallLeft) StartWallRun();
+    }
+    private void StartWallRun()
+    {
+        rb
+    }
+    private void StopWallRun()
+    {
+
+    }
+    private void CheckForWall()
+    {
+        isWallRight = Physics.Raycast(transform.position, DeviceOrientation.LandscapeRight, 1f, whatIsWall);
+        isWallRight = Physics.Raycast(transform.position, DeviceOrientation.LandscapeRight, 1f, whatIsWall);
+    }
 
     Vector3 velocity;
     bool isGrounded;
