@@ -194,7 +194,7 @@ public class PlayerMovement2 : MonoBehaviour
         // Movement while sliding
         if (grounded && crouching)
         {
-            multiplier = 0.5f;
+            
             multiplierV = 0.5f;
         }
 
