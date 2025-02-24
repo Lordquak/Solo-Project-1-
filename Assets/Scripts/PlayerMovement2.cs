@@ -127,7 +127,7 @@ public class PlayerMovement2 : MonoBehaviour
             StartCrouch();
         if (Input.GetKeyUp(KeyCode.LeftControl))
             StopCrouch();
-
+        
        
     }
 
@@ -192,7 +192,11 @@ public class PlayerMovement2 : MonoBehaviour
         }
 
         // Movement while sliding
-        if (grounded && crouching) multiplierV = 0f;
+        if (grounded && crouching)
+        {
+            
+            multiplierV = 0.5f;
+        }
 
         //Apply forces to move player
         rb.AddForce(orientation.transform.forward * y * moveSpeed * Time.deltaTime * multiplier * multiplierV);
