@@ -135,6 +135,7 @@ public class PlayerMovement2 : MonoBehaviour
     {
         transform.localScale = crouchScale;
         transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
+        /*
         if (rb.velocity.magnitude > 0.5f)
         {
             if (grounded)
@@ -142,6 +143,7 @@ public class PlayerMovement2 : MonoBehaviour
                 rb.AddForce(orientation.transform.forward * slideForce);
             }
         }
+        */
     }
 
     private void StopCrouch()
@@ -150,6 +152,7 @@ public class PlayerMovement2 : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
     }
 
+    
     private void Movement()
     {
         //Extra gravity
@@ -176,10 +179,12 @@ public class PlayerMovement2 : MonoBehaviour
         }
 
         //If speed is larger than maxspeed, cancel out the input so you don't go over max speed
-        if (x > 0 && xMag > maxSpeed) x = 0;
+        if (x > 0 && xMag > maxSpeed ) x = 0;
         if (x < 0 && xMag < -maxSpeed) x = 0;
         if (y > 0 && yMag > maxSpeed) y = 0;
         if (y < 0 && yMag < -maxSpeed) y = 0;
+
+        
 
         //Some multipliers
         float multiplier = 1f, multiplierV = 1f;
@@ -194,9 +199,12 @@ public class PlayerMovement2 : MonoBehaviour
         // Movement while sliding
         if (grounded && crouching)
         {
-            
+
+            multiplier = 0.5f;
             multiplierV = 0.5f;
         }
+
+
 
         //Apply forces to move player
         rb.AddForce(orientation.transform.forward * y * moveSpeed * Time.deltaTime * multiplier * multiplierV);
