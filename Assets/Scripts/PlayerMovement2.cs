@@ -135,7 +135,7 @@ public class PlayerMovement2 : MonoBehaviour
     {
         transform.localScale = crouchScale;
         transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
-        /*
+        
         if (rb.velocity.magnitude > 0.5f)
         {
             if (grounded)
@@ -143,7 +143,7 @@ public class PlayerMovement2 : MonoBehaviour
                 rb.AddForce(orientation.transform.forward * slideForce);
             }
         }
-        */
+        
     }
 
     private void StopCrouch()
@@ -172,11 +172,11 @@ public class PlayerMovement2 : MonoBehaviour
         float maxSpeed = this.maxSpeed;
 
         //If sliding down a ramp, add force down so player stays grounded and also builds speed
-        if (crouching && grounded && readyToJump)
-        {
-            rb.AddForce(Vector3.down * Time.deltaTime * 3000);
-            return;
-        }
+        //if (crouching && grounded && readyToJump)
+       // {
+          //  rb.AddForce(Vector3.down * Time.deltaTime * 3000);
+      //      return;
+       // }
 
         //If speed is larger than maxspeed, cancel out the input so you don't go over max speed
         if (x > 0 && xMag > maxSpeed ) x = 0;
@@ -261,11 +261,11 @@ public class PlayerMovement2 : MonoBehaviour
         if (!grounded || jumping) return;
 
         //Slow down sliding
-        if (crouching)
-        {
-            rb.AddForce(moveSpeed * Time.deltaTime * -rb.velocity.normalized * slideCounterMovement);
-            return;
-        }
+        //if (crouching)
+       // {
+         //   rb.AddForce(moveSpeed * Time.deltaTime * -rb.velocity.normalized * slideCounterMovement);
+          //  return;
+       // }
 
         //Counter movement
         if (Math.Abs(mag.x) > threshold && Math.Abs(x) < 0.05f || (mag.x < -threshold && x > 0) || (mag.x > threshold && x < 0))
@@ -281,7 +281,7 @@ public class PlayerMovement2 : MonoBehaviour
         if (Mathf.Sqrt((Mathf.Pow(rb.velocity.x, 2) + Mathf.Pow(rb.velocity.z, 2))) > maxSpeed)
         {
             float fallspeed = rb.velocity.y;
-            Vector3 n = rb.velocity.normalized * maxSpeed;
+           Vector3 n = rb.velocity.normalized * maxSpeed;
             rb.velocity = new Vector3(n.x, fallspeed, n.z);
         }
     }
