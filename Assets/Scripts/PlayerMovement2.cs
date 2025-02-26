@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerMovement2 : MonoBehaviour
 {
+
+    private FootstepSystem footstepsystem; 
     public Transform playerCam;
     public Transform orientation;
 
@@ -21,6 +23,7 @@ public class PlayerMovement2 : MonoBehaviour
     public float maxSpeed = 20;
     public bool grounded;
     public LayerMask whatIsGround;
+
 
     public float counterMovement = 0.175f;
     private float threshold = 0.01f;
@@ -136,11 +139,15 @@ public class PlayerMovement2 : MonoBehaviour
         transform.localScale = crouchScale;
         transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
         
+
+        
         if (rb.velocity.magnitude > 0.5f)
         {
+            maxSpeed = 2f;
             if (grounded)
             {
                 rb.AddForce(orientation.transform.forward * slideForce);
+               
             }
         }
         
@@ -150,6 +157,8 @@ public class PlayerMovement2 : MonoBehaviour
     {
         transform.localScale = playerScale;
         transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+
+        maxSpeed = 5f;
     }
 
     
@@ -196,8 +205,8 @@ public class PlayerMovement2 : MonoBehaviour
             multiplierV = 0.5f;
         }
 
-        // Movement while sliding
-        if (grounded && crouching)
+        // Movement while crouching
+        if (crouching)
         {
 
             multiplier = 0.5f;
