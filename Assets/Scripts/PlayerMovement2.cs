@@ -88,7 +88,7 @@ public class PlayerMovement2 : MonoBehaviour
         if (!isWallLeft && !isWallRight) StopWallRun();
        
     }
-
+    
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -106,7 +106,7 @@ public class PlayerMovement2 : MonoBehaviour
     {
         Movement();
     }
-
+    
     private void Update()
     {
         MyInput();
@@ -114,7 +114,7 @@ public class PlayerMovement2 : MonoBehaviour
         Look();
         WallRunInput();
     }
-
+    
     /// <summary>
     /// Find user input. Should put this in its own class but im lazy
     /// </summary>

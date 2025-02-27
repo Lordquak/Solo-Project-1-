@@ -10,6 +10,7 @@ namespace FSR
         public Transform foot;
         public float raycastSize = 10;
         [SerializeField] private FSR_Data data;
+        public float volume = 0.2f;
 
 
         public void Start()
