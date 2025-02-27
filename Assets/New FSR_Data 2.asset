@@ -15,12 +15,12 @@ MonoBehaviour:
   surfaces:
   - name: STONE
     soundEffects:
-    - {fileID: 8300000, guid: 7eef3c19548ace64ab38167d3f075fed, type: 3}
-    - {fileID: 8300000, guid: 7eef3c19548ace64ab38167d3f075fed, type: 3}
-    - {fileID: 8300000, guid: 7eef3c19548ace64ab38167d3f075fed, type: 3}
-    - {fileID: 8300000, guid: 7eef3c19548ace64ab38167d3f075fed, type: 3}
-    - {fileID: 8300000, guid: 7eef3c19548ace64ab38167d3f075fed, type: 3}
-    - {fileID: 8300000, guid: 7eef3c19548ace64ab38167d3f075fed, type: 3}
-    - {fileID: 8300000, guid: 7eef3c19548ace64ab38167d3f075fed, type: 3}
-    - {fileID: 8300000, guid: 7eef3c19548ace64ab38167d3f075fed, type: 3}
-    - {fileID: 8300000, guid: 7eef3c19548ace64ab38167d3f075fed, type: 3}
+    - {fileID: 8300000, guid: ffb7b8aa7853f34419ab0846ef6cab1f, type: 3}
+    - {fileID: 8300000, guid: ffb7b8aa7853f34419ab0846ef6cab1f, type: 3}
+    - {fileID: 8300000, guid: ffb7b8aa7853f34419ab0846ef6cab1f, type: 3}
+    - {fileID: 8300000, guid: ffb7b8aa7853f34419ab0846ef6cab1f, type: 3}
+    - {fileID: 8300000, guid: ffb7b8aa7853f34419ab0846ef6cab1f, type: 3}
+    - {fileID: 8300000, guid: ffb7b8aa7853f34419ab0846ef6cab1f, type: 3}
+    - {fileID: 8300000, guid: ffb7b8aa7853f34419ab0846ef6cab1f, type: 3}
+    - {fileID: 8300000, guid: ffb7b8aa7853f34419ab0846ef6cab1f, type: 3}
+    - {fileID: 8300000, guid: ffb7b8aa7853f34419ab0846ef6cab1f, type: 3}

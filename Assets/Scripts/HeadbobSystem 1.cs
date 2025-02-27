@@ -24,7 +24,12 @@ public class HeadbobSystem : MonoBehaviour {
     	
 	    CheckForHeadbobTrigger();
 		StopHeadbob();
-	    
+
+        if (Input.GetKey(KeyCode.LeftControl))  // Check if Control is being pressed
+        {
+			Frequency = 7.0f;
+        }
+
     }
     
 	private void CheckForHeadbobTrigger() {

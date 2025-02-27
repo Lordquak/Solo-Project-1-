@@ -27,11 +27,11 @@ public class CrouchFootstepSytem : MonoBehaviour
 
         float inputMagnitude = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).magnitude;
 
-        if (inputMagnitude > 0)
-        {
+       // if (inputMagnitude > 0)
+      //  {
 
-            StartFootsteps();
-        }
+          //  StartFootsteps();
+       // }
     }
 
     private void StartFootsteps()
