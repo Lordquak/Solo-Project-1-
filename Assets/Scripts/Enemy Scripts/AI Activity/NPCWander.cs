@@ -36,7 +36,7 @@ namespace Game.AiNavigation
 
         void SetRandomDestination()
         {
-            npc.Agent.SetDestination(area.GetRandomPoint());
+            npc.Agent.SetDestination(Area.GetRandomPoint());
         }
     }
 
