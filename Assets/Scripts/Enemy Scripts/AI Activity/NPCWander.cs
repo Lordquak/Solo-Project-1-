@@ -6,7 +6,7 @@ using UnityEngine.AI;
 namespace Game.AiNavigation
 
 {
-    public class NPCWander : MonoBehaviour
+    public class NPCWander : NPCComponent
     {
         
         public Area Area;
