@@ -13,7 +13,7 @@ namespace Game
     public struct NoiseInfo
     {
 
-     //public NPC Owner;
+     public NPC Owner;
      public NoiseType Type;
      public Vector3 Position;
      public float Radius;

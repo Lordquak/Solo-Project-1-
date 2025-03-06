@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Game.AiNavigation
+namespace Game
 {
     [RequireComponent(typeof(NavMeshAgent))]
     [RequireComponent(typeof(Animator))]
@@ -25,5 +25,27 @@ namespace Game.AiNavigation
             Agent = GetComponent<NavMeshAgent>();
             Animator = GetComponent<Animator>();
         }
+
+        #region Sensors
+
+        public NPC Sensor;
+        
+        public Vector3 SensorPosition
+        {
+            get
+            {
+                return transform.position + Vector3.up * 1.5f;
+            }
+        }
+
+        public void MakeNoise(NoiseInfo noiseInfo)
+        {
+            noiseInfo.Owner = this;
+
+            NoiseSystem.Instance?.MakeNoise(noiseInfo);
+        }
+
+
+        #endregion
     }
 }
