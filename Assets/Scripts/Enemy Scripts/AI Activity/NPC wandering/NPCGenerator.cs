@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace Game.AiNavigation
+namespace Game
 {
     public class NPCGenerator : MonoBehaviour
     {

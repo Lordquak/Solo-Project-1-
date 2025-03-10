@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.XR;
 
-namespace Game.AiNavigation
+namespace Game
 
 {
     public class NPCWander : NPCComponent

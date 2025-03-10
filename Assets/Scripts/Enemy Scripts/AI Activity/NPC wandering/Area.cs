@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 
 
-namespace Game.AiNavigation
+namespace Game
 {
 
 

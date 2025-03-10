@@ -30,7 +30,7 @@ public class PlayerMovement2 : MonoBehaviour
     public float maxSlopeAngle = 35f;
 
     //Crouch & Slide
-    private Vector3 crouchScale = new Vector3(1, 0.5f, 1);
+    private Vector3 crouchScale = new Vector3(1, 1.2f, 1);
     private Vector3 playerScale;
     public float slideForce = 400;
     public float slideCounterMovement = 0.2f;
@@ -126,42 +126,45 @@ public class PlayerMovement2 : MonoBehaviour
         crouching = Input.GetKey(KeyCode.LeftControl);
 
         //Crouching
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-            StartCrouch();
-        if (Input.GetKeyUp(KeyCode.LeftControl))
-            StopCrouch();
+       // if (Input.GetKeyDown(KeyCode.LeftControl))
+            //StartCrouch();
+        //if (Input.GetKeyUp(KeyCode.LeftControl));
+          //  StopCrouch();
         
        
     }
 
-    private void StartCrouch()
-    {
-        transform.localScale = crouchScale;
-        transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
-        
+    /* private void StartCrouch()
+     {
+         transform.localScale = crouchScale;
+         transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
 
-        
-        if (rb.velocity.magnitude > 0.5f)
-        {
-            maxSpeed = 2f;
-            if (grounded)
-            {
-                rb.AddForce(orientation.transform.forward * slideForce);
-               
-            }
-        }
-        
-    }
 
-    private void StopCrouch()
-    {
-        transform.localScale = playerScale;
-        transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
 
-        maxSpeed = 5f;
-    }
+         if (rb.velocity.magnitude > 0.5f)
+         {
+             maxSpeed = 2f;
+             if (grounded)
+             {
+                 rb.AddForce(orientation.transform.forward * slideForce);
 
-    
+             }
+         }
+
+
+     }
+
+     private void StopCrouch()
+     {
+         transform.localScale = playerScale;
+         transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+
+         maxSpeed = 5f;
+     }
+     */
+
+
+
     private void Movement()
     {
         //Extra gravity
@@ -212,6 +215,8 @@ public class PlayerMovement2 : MonoBehaviour
             multiplier = 0.5f;
             multiplierV = 0.5f;
         }
+
+        
 
 
 

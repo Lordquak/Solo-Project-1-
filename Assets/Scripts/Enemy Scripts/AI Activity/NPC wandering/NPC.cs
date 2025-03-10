@@ -26,7 +26,7 @@ namespace Game
             Animator = GetComponent<Animator>();
         }
 
-        #region Sensors
+       /* #region Sensors
 
         public NPC Sensor;
         
@@ -47,5 +47,6 @@ namespace Game
 
 
         #endregion
+       */
     }
 }
