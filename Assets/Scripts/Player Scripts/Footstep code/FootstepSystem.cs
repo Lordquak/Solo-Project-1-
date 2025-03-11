@@ -39,7 +39,7 @@ public class FootstepSystem : MonoBehaviour
 		if (Sin > 0.97f && isTriggered == false) {
 
 			isTriggered = true;
-			Debug.Log("Tic");
+			//Debug.Log("Tic");
 			onFootStep.Invoke();
 
 		} else if (isTriggered == true && Sin < -0.97f) {

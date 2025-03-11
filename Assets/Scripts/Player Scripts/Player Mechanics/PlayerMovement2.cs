@@ -125,16 +125,17 @@ public class PlayerMovement2 : MonoBehaviour
         jumping = Input.GetButton("Jump");
         crouching = Input.GetKey(KeyCode.LeftControl);
 
-        //Crouching
-       // if (Input.GetKeyDown(KeyCode.LeftControl))
-            //StartCrouch();
-        //if (Input.GetKeyUp(KeyCode.LeftControl));
-          //  StopCrouch();
+        // Crouching
+         if (Input.GetKeyDown(KeyCode.LeftControl))
+             StartCrouch();
+         if (Input.GetKeyUp(KeyCode.LeftControl)) 
+             StopCrouch();
+        
         
        
     }
 
-    /* private void StartCrouch()
+     private void StartCrouch()
      {
          transform.localScale = crouchScale;
          transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
@@ -161,7 +162,7 @@ public class PlayerMovement2 : MonoBehaviour
 
          maxSpeed = 5f;
      }
-     */
+     
 
 
 
