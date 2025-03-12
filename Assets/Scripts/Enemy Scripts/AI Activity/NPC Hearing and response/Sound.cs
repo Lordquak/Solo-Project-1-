@@ -6,7 +6,7 @@ namespace GamePlay
 {
     public class Sound
     {
-        public enum SoundType { Default = -1, Interesting, Dangerous };
+        public enum SoundType { Default = -1, Interesting, Danger };
 
         public Sound(Vector3 _pos, float _range, SoundType _type = SoundType.Default)
         {
