@@ -138,16 +138,20 @@ public class PlayerMovement2 : MonoBehaviour
      private void StartCrouch()
      {
          transform.localScale = crouchScale;
-         transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
+         transform.position = new Vector3(transform.position.x, transform.position.y - 0.8f, transform.position.z);
+
+        rb.velocity = new Vector3(rb.velocity.x * 0.5f, rb.velocity.y, rb.velocity.z * 0.5f);
+
+        // Lower max speed while crouching
+        maxSpeed *= 0.5f;
 
 
-
-         if (rb.velocity.magnitude > 0.5f)
+        if (rb.velocity.magnitude > 0.5f)
          {
              maxSpeed = 2f;
              if (grounded)
              {
-                 rb.AddForce(orientation.transform.forward * slideForce);
+                rb.AddForce(orientation.transform.forward * slideForce);
 
              }
          }
@@ -212,10 +216,15 @@ public class PlayerMovement2 : MonoBehaviour
         // Movement while crouching
         if (crouching)
         {
-
+            
             multiplier = 0.5f;
             multiplierV = 0.5f;
         }
+
+       
+            
+
+        
 
         
 
