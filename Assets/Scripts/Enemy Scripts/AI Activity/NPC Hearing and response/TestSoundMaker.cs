@@ -12,6 +12,11 @@ namespace GamePlay
 
         [SerializeField] private LayerMask groundLayer;
 
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireSphere(transform.position, soundRange);
+        }
         private void OnCollisionEnter(Collision collision)
         {
             // Check if the collided object is on the ground layer

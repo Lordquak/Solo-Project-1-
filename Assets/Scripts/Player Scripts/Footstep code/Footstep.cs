@@ -17,5 +17,9 @@ public class Footstep : MonoBehaviour
         {
             footstepsSound.enabled = false;
         }
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            footstepsSound.enabled = false;
+        }
     }
 }
