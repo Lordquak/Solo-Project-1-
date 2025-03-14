@@ -2102,7 +2102,6 @@ GameObject:
   - component: {fileID: 693612976}
   - component: {fileID: 693612975}
   - component: {fileID: 693612974}
-  - component: {fileID: 693612973}
   - component: {fileID: 693612978}
   - component: {fileID: 693612980}
   - component: {fileID: 693612979}
@@ -2116,24 +2115,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &693612973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 693612972}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0d55f91aed0f9049a08ee7a08630cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  patrolPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetPoint: 0
-  speed: 4
 --- !u!136 &693612974
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2232,7 +2213,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 5.5
+  m_Speed: 6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
