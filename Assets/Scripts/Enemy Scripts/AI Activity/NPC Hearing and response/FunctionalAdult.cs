@@ -30,12 +30,7 @@ public class FunctionalAdult : MonoBehaviour, IHear
         if (sound.soundType == Sound.SoundType.Interesting)
         {
             MoveTo(sound.pos);
-            NPCWander wanderScript = GetComponent<NPCWander>();
-            if (wanderScript != null)
-            {
-                wanderScript.enabled = false;
-                Debug.Log("NPCWander has been disabled.");
-            }
+
         }
 
         else if (sound.soundType == Sound.SoundType.Danger) //Must have this case so that it doesn't run away from the default sound type
@@ -48,6 +43,7 @@ public class FunctionalAdult : MonoBehaviour, IHear
 
     private void MoveTo(Vector3 pos) 
     {
+        
         agent.SetDestination(pos);
         agent.isStopped = false;
     }

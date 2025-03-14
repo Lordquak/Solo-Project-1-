@@ -6,6 +6,7 @@ public class PickupClass : MonoBehaviour
 {
     [SerializeField] private LayerMask PickupLayer;
     [SerializeField] private Camera PlayerCamera;
+    [SerializeField] private float ThrowingForce;
     [SerializeField] private float PickupRange;
     [SerializeField] private Transform Hand;
 
@@ -58,7 +59,21 @@ public class PickupClass : MonoBehaviour
             }
             
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (CurrentObjectRigidbody)
+            {
+                CurrentObjectRigidbody.isKinematic = false;
+                CurrentObjectCollider.enabled = true;
+
+                CurrentObjectRigidbody.AddForce(PlayerCamera.transform.forward * ThrowingForce, ForceMode.Impulse);
+
+                CurrentObjectRigidbody = null;
+                CurrentObjectCollider = null;
+            }
+        }
+
         if (CurrentObjectRigidbody)
         {
             CurrentObjectRigidbody.position = Hand.position;

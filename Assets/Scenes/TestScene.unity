@@ -1172,7 +1172,6 @@ GameObject:
   - component: {fileID: 511127924}
   - component: {fileID: 511127923}
   - component: {fileID: 511127922}
-  - component: {fileID: 511127921}
   m_Layer: 12
   m_Name: 'Crouching Sound '
   m_TagString: Untagged
@@ -1195,19 +1194,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 877538049}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &511127921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 511127919}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8b57184fb865904590375c76122adc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scriptToDisable: {fileID: 0}
 --- !u!114 &511127922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2212,8 +2198,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 693612972}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 6
+  m_Radius: 1
+  m_Speed: 6.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -2237,7 +2223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89621b505f5962419e140bdf6ef4c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Agent: {fileID: 0}
+  Agent: {fileID: 693612978}
   Animator: {fileID: 0}
 --- !u!95 &693612980
 Animator:
@@ -2273,8 +2259,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Area: {fileID: 262128089}
-  maxWaitTime: 3
-  maxWaitTimeRandom: 5
+  maxWaitTime: 2
+  maxWaitTimeRandom: 6
   waitTime: 0
   state: 0
   wanderTime: 0
@@ -3480,7 +3466,7 @@ Transform:
   m_GameObject: {fileID: 877538045}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.44, y: 13.242, z: 55.02}
+  m_LocalPosition: {x: -48.92, y: 13.17, z: 57.31}
   m_LocalScale: {x: 1.2, y: 1.8, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3647,6 +3633,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   PlayerCamera: {fileID: 963194227}
+  ThrowingForce: 20
   PickupRange: 10
   Hand: {fileID: 423871573}
 --- !u!1 &884878443
@@ -4131,7 +4118,7 @@ Transform:
   m_GameObject: {fileID: 889736143}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.85, y: 4.982, z: 13.19}
+  m_LocalPosition: {x: -10.6, y: 4.982, z: 13.19}
   m_LocalScale: {x: 0.6916575, y: 0.6916575, z: 0.6916575}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4242,11 +4229,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 889736143}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 611c9cbfac4edf043a8974397d24f464, type: 3}
+  m_Script: {fileID: 11500000, guid: 7414aaf36528a8647ab7e91beed8940f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 889736150}
-  soundRange: 25
+  soundRange: 15
   soundType: 0
   groundLayer:
     serializedVersion: 2
@@ -4722,7 +4709,6 @@ GameObject:
   - component: {fileID: 1219357668}
   - component: {fileID: 1219357670}
   - component: {fileID: 1219357671}
-  - component: {fileID: 1219357673}
   m_Layer: 12
   m_Name: Walking Sound
   m_TagString: Untagged
@@ -5095,19 +5081,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   footstepsSound: {fileID: 1219357670}
---- !u!114 &1219357673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1219357657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8b57184fb865904590375c76122adc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scriptToDisable: {fileID: 1219357664}
 --- !u!43 &1448074973
 Mesh:
   m_ObjectHideFlags: 0
@@ -5284,7 +5257,7 @@ GameObject:
   - component: {fileID: 1680208515}
   - component: {fileID: 1680208514}
   m_Layer: 0
-  m_Name: NavMeshSurface
+  m_Name: NavMesh 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6601,9 +6574,9 @@ SceneRoots:
   - {fileID: 778787437}
   - {fileID: 693612977}
   - {fileID: 1116712985}
-  - {fileID: 1680208515}
   - {fileID: 1773553562}
   - {fileID: 64433894}
   - {fileID: 1066244010}
   - {fileID: 262128090}
   - {fileID: 585376407}
+  - {fileID: 1680208515}
