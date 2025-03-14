@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using GamePlay;
 
-using UnityEngine.AI; //For use of Navmesh agent
+using UnityEngine.AI;
+using Game; //For use of Navmesh agent
 
 public class FunctionalAdult : MonoBehaviour, IHear
 {
@@ -25,9 +26,18 @@ public class FunctionalAdult : MonoBehaviour, IHear
         *   Examples:
         *   Animate the NPC, Play a sound clip ("What was that?!"), Throw some UI up, Check if the sound is more important than current task
         */
-    
+
         if (sound.soundType == Sound.SoundType.Interesting)
+        {
             MoveTo(sound.pos);
+            NPCWander wanderScript = GetComponent<NPCWander>();
+            if (wanderScript != null)
+            {
+                wanderScript.enabled = false;
+                Debug.Log("NPCWander has been disabled.");
+            }
+        }
+
         else if (sound.soundType == Sound.SoundType.Danger) //Must have this case so that it doesn't run away from the default sound type
         {
             Vector3 dir = (sound.pos - transform.position).normalized;
@@ -41,4 +51,6 @@ public class FunctionalAdult : MonoBehaviour, IHear
         agent.SetDestination(pos);
         agent.isStopped = false;
     }
+
+    
 }
