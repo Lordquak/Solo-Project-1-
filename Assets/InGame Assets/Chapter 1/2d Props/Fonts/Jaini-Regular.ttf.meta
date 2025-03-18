@@ -3,12 +3,17 @@ guid: 9988913877cf5d04194bfb562814592e
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 16
+  fontSize: 5
   forceTextureCase: -2
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
   fontNames:
+  - Jaini
+  - Jaini
+  - Jaini
+  - Jaini
+  - Jaini
   - Jaini
   fallbackFontReferences: []
   customCharacters: 
