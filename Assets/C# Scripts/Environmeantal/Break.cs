@@ -20,11 +20,11 @@ public class Break : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnMouseDown()
     {
-       if (other.gameObject.tag == "Breaker")
-        {
+       
+        
             isBroken = true;
-        }
+        
     }
 }
