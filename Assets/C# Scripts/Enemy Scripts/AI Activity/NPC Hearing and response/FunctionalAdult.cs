@@ -9,6 +9,7 @@ using Game; //For use of Navmesh agent
 public class FunctionalAdult : MonoBehaviour, IHear
 {
     [SerializeField] private NavMeshAgent agent = null;
+    [SerializeField] private NPCWander npcWander = null; // Reference to NPCWander script
 
     [SerializeField, Tooltip("How far away, in meters, the agent will run from danger.")] 
     private float displacementFromDanger = 10f;
@@ -30,6 +31,12 @@ public class FunctionalAdult : MonoBehaviour, IHear
         if (sound.soundType == Sound.SoundType.Interesting)
         {
             MoveTo(sound.pos);
+
+            if (npcWander != null)  // Check if NPCWander is assigned
+            {
+                npcWander.enabled = false;  // Disable wandering
+            }
+
 
         }
 
