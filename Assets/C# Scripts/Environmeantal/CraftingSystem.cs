@@ -4,7 +4,7 @@ using UnityEngine;
 using static UnityEditor.Progress;
 
 public class CraftingSystem {
-    private const int GRID_SIZE = 3;
+   /* private const int GRID_SIZE = 3;
 
     private Item[,] itemArray;
    public CraftingSystem()
@@ -60,5 +60,5 @@ public class CraftingSystem {
                 return false;
             }
         }
-    }
+    }*/
 }
