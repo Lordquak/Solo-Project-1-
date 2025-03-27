@@ -10,43 +10,43 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3c27c22be03c00d4f865ec342c1a1f1a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -49.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c27c22be03c00d4f865ec342c1a1f1a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.23
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c27c22be03c00d4f865ec342c1a1f1a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 31.99
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c27c22be03c00d4f865ec342c1a1f1a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7052936
+      value: 0.4890025
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c27c22be03c00d4f865ec342c1a1f1a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.004568781
+      value: 0.5171849
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c27c22be03c00d4f865ec342c1a1f1a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.70888585
+      value: -0.48516163
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c27c22be03c00d4f865ec342c1a1f1a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.004592053
+      value: -0.5079513
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c27c22be03c00d4f865ec342c1a1f1a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.742
+      value: 0.741
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c27c22be03c00d4f865ec342c1a1f1a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90.291
+      value: -90.328
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c27c22be03c00d4f865ec342c1a1f1a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -92.923
       objectReference: {fileID: 0}
     - target: {fileID: -3110642183815766040, guid: 3c27c22be03c00d4f865ec342c1a1f1a, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3c27c22be03c00d4f865ec342c1a1f1a, type: 3}
       propertyPath: m_Name
-      value: New Prefab
+      value: Broken wood plank
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3c27c22be03c00d4f865ec342c1a1f1a, type: 3}
       propertyPath: m_IsActive
