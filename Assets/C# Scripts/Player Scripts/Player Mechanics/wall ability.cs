@@ -1,17 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class wallability : MonoBehaviour
 {
     public GameObject wall;
-
+    public NavMeshSurface navMeshSurface;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Instantiate(wall);
+            Vector3 spawnPosition = gameObject.transform.position + gameObject.transform.forward * 10f;
+            GameObject newWall = Instantiate(wall, spawnPosition, transform.rotation);
+
+           
         }
     }
 }
