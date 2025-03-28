@@ -1,0 +1,25 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using static UnityEditor.Progress;
+
+public class ItemPickup : MonoBehaviour
+{
+    /*public Item Item;
+
+     void Pickup()
+    {
+        inventoryManager.Instance.Add(Item);
+        Destroy(gameObject);
+    }
+
+    private void OnMouseDown()
+    {
+
+        Pickup();
+    }
+
+   */
+
+}
