@@ -10904,7 +10904,7 @@ Transform:
   m_GameObject: {fileID: 877538045}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -56.4, y: 15.1, z: 42.76}
+  m_LocalPosition: {x: -56.4, y: 23.33, z: 42.76}
   m_LocalScale: {x: 1.2, y: 1.8, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20968,7 +20968,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -436, y: 261}
   m_SizeDelta: {x: 989.85, y: 540.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1533374961
@@ -21005,7 +21005,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Left Ctrl = crouch \nE = pickup/Drop\nQ = Throw\nW = forward\nA = left\nS
-    = backwards\nD = right\n\nLeft Click on wood planks to break"
+    = backwards\nD = right\n\nLeft Click on wood planks to break\n\ntry to crouch
+    the enemy listens for sound but cant hear  use the cubes to distract it"
 --- !u!222 &1533374962
 CanvasRenderer:
   m_ObjectHideFlags: 0
