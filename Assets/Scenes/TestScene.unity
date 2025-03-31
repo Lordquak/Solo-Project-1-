@@ -9524,6 +9524,14 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3362087621448985478, guid: ecbdb4722801a324b894fcdd44d6adf0, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435865270730279255, guid: ecbdb4722801a324b894fcdd44d6adf0, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4617954016527246979, guid: ecbdb4722801a324b894fcdd44d6adf0, type: 3}
       propertyPath: m_Name
       value: New Prefab (1)
@@ -12481,6 +12489,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wall: {fileID: 8852554096402522929, guid: a7a1a92595d09224ab2950f21c792125, type: 3}
   navMeshSurface: {fileID: 1680208514}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  wallHeightOffset: 0.1
 --- !u!1 &1011311078
 GameObject:
   m_ObjectHideFlags: 0
@@ -25975,6 +25987,14 @@ PrefabInstance:
     - target: {fileID: 2919833583990763548, guid: ecbdb4722801a324b894fcdd44d6adf0, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3362087621448985478, guid: ecbdb4722801a324b894fcdd44d6adf0, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435865270730279255, guid: ecbdb4722801a324b894fcdd44d6adf0, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4617954016527246979, guid: ecbdb4722801a324b894fcdd44d6adf0, type: 3}
       propertyPath: m_Name
