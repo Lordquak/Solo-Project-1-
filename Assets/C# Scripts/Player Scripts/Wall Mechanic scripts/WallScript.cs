@@ -12,8 +12,18 @@ public class WallScript : MonoBehaviour
     [Space]
     [Header("WALL BUILDING PARAMETERS")]
     public GameObject wallMarker;
+    public GameObject wallcube;
+    public int wallCubeAmount = 5;
+    public float wallCubeDistance = 1f;
+    public float wallDuration = 5f;
+    public float updateRate = 0.1f;
 
+
+    private Vector3 destination;
+    private Quaternion rotation;
     private bool wallMarkerActive;
+    private bool inRange;
+    private bool wallBuilding;
 
     void Start()
     {
@@ -41,7 +51,7 @@ public class WallScript : MonoBehaviour
             wallMarker.SetActive(false);
         }
 
-        if (Input.GetButtonDown("R") && inRange && wallBuilding)
+        if (Input.GetKeyDown(KeyCode.R) && inRange && wallBuilding)
         {
             BuildWall();
         }
@@ -81,44 +91,39 @@ public class WallScript : MonoBehaviour
     void BuildWall()
     {
         wallBuilding = true;
-        wallMarker = false;
+        wallMarkerActive = false;
         GameObject wall = new GameObject();
         wall.transform.position = destination;
         wall.name = "Wall";
 
         for(int i=0; i<wallCubeAmount; i++)
         {
-            var cube = Instantiate(wallcube, OnDestinationReached + neww Vector3(i * wallCubeDistance, 0, 0), Quaternion.identity) as GameObject;
-            cube.transform.SetParent(wall.transform);
+            var cube = Instantiate(wallcube, destination + new Vector3(i * wallCubeDistance, 0, 0), Quaternion.identity) as GameObject;
+            cube.transform.SetParent(wall.transform); 
         }
 
         wall.transform.rotation = rotation;
-        wall.transform.Translate(new Vector3(-(int)(wallCubeAmount / 2) * wallCubeDistance, 0, 0), Space.Self);
+        wall.transform.Translate(new Vector3(-(int)(wallCubeAmount / 2)*wallCubeDistance, 0, 0), Space.Self);
 
         wallBuilding = false;
-
+        
         StartCoroutine(DestroyWall(wall));
     }
 
     IEnumerator DestroyWall (GameObject wallToDestroy)
     {
         float duration = wallDuration;
-        float cracksAmount = 0;
+        
 
         while(duration > 0)
         {
             duration -= updateRate;
 
-            if (cracksAmount < 1)
-            {
-                cracksAmount += 1 / ((wallDuration - 0.2f) / updateRate);
-                for (int i = 0; i < BuiltinMaterials.Count; i++)
-                    materials[i].SetFloat("CracksAmount_", cracksAmount);
-            }
+           
 
-            yield return new WaitForSeconds(UpdateRate);
+            yield return new WaitForSeconds(updateRate);
             if (duration <= 0)
-                Destroy(WallToDestroy);
+                Destroy(wallToDestroy);
         }
 
 

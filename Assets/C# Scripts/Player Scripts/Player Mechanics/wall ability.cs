@@ -16,7 +16,7 @@ public class wallability : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             Vector3 spawnPosition = gameObject.transform.position + gameObject.transform.forward * 10f;
-            GameObject newWall = Instantiate(wall, spawnPosition, transform.rotation);
+            GameObject newWall = Instantiate(wall, spawnPosition, Quaternion.identity);
 
 
 
