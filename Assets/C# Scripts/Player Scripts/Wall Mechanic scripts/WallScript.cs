@@ -51,7 +51,7 @@ public class WallScript : MonoBehaviour
             wallMarker.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.R) && inRange && wallBuilding)
+        if (Input.GetKeyDown(KeyCode.R) && inRange && !wallBuilding)
         {
             BuildWall();
         }
