@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 using static UnityEditor.Progress;
+using Image = UnityEngine.UI.Image;
 
 public class InventoryManager : MonoBehaviour
 {
-   /* public static InventoryManager Instance;
+    public static InventoryManager Instance;
     public List<Item> Items = new List<Item>();
 
-    public Transform Itemcontent;
-    public GameObject Inventoryitem;
+    public Transform ItemContent;
+    public GameObject InventoryItem;
 
     private void Awake()
     {
@@ -30,12 +33,13 @@ public class InventoryManager : MonoBehaviour
     {
         foreach (var item in Items)
         {
-            GameObject obj = Instantiate(inventoryItem, ItemContent);
+            GameObject obj = Instantiate(InventoryItem, ItemContent);
             var itemName = obj.transform.Find("Item/ItemName").GetComponent<Text>();
             var itemicon = obj.transform.Find("Item/ItemIcon").GetComponent<Image>();
 
             itemName.text = item.itemName;
             itemicon.sprite = item.icon;
+            
         }
-    }*/
+    }
 }
