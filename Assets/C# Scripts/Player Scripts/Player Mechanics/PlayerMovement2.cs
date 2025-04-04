@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement2 : MonoBehaviour
 {
 
-    private FootstepSystem footstepsystem; 
+    private FootstepSystem footstepsystem;
     public Transform playerCam;
     public Transform orientation;
 
@@ -48,9 +48,9 @@ public class PlayerMovement2 : MonoBehaviour
     private Vector3 normalVector = Vector3.up;
     private Vector3 wallNormalVector;
 
-   
-   
-   
+
+
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -61,7 +61,13 @@ public class PlayerMovement2 : MonoBehaviour
         playerScale = transform.localScale;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
     }
+
+    
+
+
+
 
 
     private void FixedUpdate()
@@ -74,7 +80,20 @@ public class PlayerMovement2 : MonoBehaviour
         MyInput();
         
         Look();
-        
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+        }
+        else 
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
+        }
+       
     }
     
     /// <summary>

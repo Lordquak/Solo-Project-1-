@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
-using static UnityEditor.Progress;
+
 using Image = UnityEngine.UI.Image;
 
 public class InventoryManager : MonoBehaviour
@@ -34,8 +34,8 @@ public class InventoryManager : MonoBehaviour
         foreach (var item in Items)
         {
             GameObject obj = Instantiate(InventoryItem, ItemContent);
-            var itemName = obj.transform.Find("Item/ItemName").GetComponent<Text>();
-            var itemicon = obj.transform.Find("Item/ItemIcon").GetComponent<Image>();
+            var itemName = obj.transform.Find("ItemName").GetComponent<Text>();
+            var itemicon = obj.transform.Find("ItemIcon").GetComponent<Image>();
 
             itemName.text = item.itemName;
             itemicon.sprite = item.icon;
