@@ -21,7 +21,7 @@ public class DialogueManager : MonoBehaviour
     Transform buttonsParent;
 
     [SerializeField]
-    PlayerController playerController;
+     PlayerMovement2 playerMovement2;
 
     public void BeginDialogue(Dialogue dialogue)
     {
@@ -29,14 +29,14 @@ public class DialogueManager : MonoBehaviour
         {
             dialoguePanel.SetActive(false);
 
-            playerController.ToggleMovement(true);
+            playerMovement2.enabled = true;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
 
             return;
         }
 
-        playerController.ToggleMovement(false);
+        playerMovement2.enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
