@@ -14,8 +14,12 @@ public class DialogueTrigger : MonoBehaviour, IInteractable
         return "Talk to Bob";
     }
 
-    public void Interact()
+    public void OnTriggerEnter(Collider other)
     {
-        dialogueManager.BeginDialogue(dialogue);
+        if (other.CompareTag("Player"))
+
+        {
+            dialogueManager.BeginDialogue(dialogue);
+        }
     }
 }

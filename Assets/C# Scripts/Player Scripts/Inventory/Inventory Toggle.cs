@@ -27,6 +27,9 @@ public class InventoryToggle : MonoBehaviour
         {
             // Toggle the visibility of the inventory panel
             ToggleInventoryPanel();
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 
