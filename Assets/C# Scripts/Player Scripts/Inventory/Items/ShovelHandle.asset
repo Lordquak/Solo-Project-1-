@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   itemName: Shovel  handle
-  value: 0
+  value: 1
   icon: {fileID: 21300000, guid: 06f1280581fa76340a9f8e9fcae354b6, type: 3}
