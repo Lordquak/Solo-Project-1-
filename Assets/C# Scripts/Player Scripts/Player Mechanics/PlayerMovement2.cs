@@ -48,6 +48,8 @@ public class PlayerMovement2 : MonoBehaviour
     private Vector3 normalVector = Vector3.up;
     private Vector3 wallNormalVector;
 
+    private bool isCursorLocked = true;
+
 
 
 
@@ -59,17 +61,13 @@ public class PlayerMovement2 : MonoBehaviour
     void Start()
     {
         playerScale = transform.localScale;
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+
     }
-
     
-
-
-
-
-
     private void FixedUpdate()
     {
         Movement();
@@ -77,23 +75,31 @@ public class PlayerMovement2 : MonoBehaviour
     
     private void Update()
     {
+
         MyInput();
         
         Look();
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            if (isCursorLocked)
+            {
+                // Unlock and show the cursor
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+            else
+            {
+                // Lock and hide the cursor
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
 
+            // Toggle the cursor state
+            isCursorLocked = !isCursorLocked;
         }
-        else 
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
 
-        }
-       
+
     }
     
     /// <summary>

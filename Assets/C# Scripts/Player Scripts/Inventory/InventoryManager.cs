@@ -1,3 +1,4 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,6 +32,7 @@ public class InventoryManager : MonoBehaviour
 
     public void ListItems()
     {
+
         foreach (Transform item in ItemContent)
         {
             Destroy(item.gameObject);
@@ -46,7 +48,5 @@ public class InventoryManager : MonoBehaviour
             itemIcon.sprite = item.icon;
             
         }
-    }
-
-   
+    } 
 }
