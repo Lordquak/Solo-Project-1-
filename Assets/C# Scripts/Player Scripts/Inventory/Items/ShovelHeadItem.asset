@@ -15,3 +15,4 @@ MonoBehaviour:
   name: ShovelHead
   icon: {fileID: 21300000, guid: 0d098b904c6d98f49b55af01f237143a, type: 3}
   isDefaultItem: 0
+  worldPrefab: {fileID: 6272683779420474564, guid: 24f1bad36b8ab0d4fb4f2431e5902227, type: 3}

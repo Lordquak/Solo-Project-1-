@@ -10,6 +10,7 @@ public class Item : ScriptableObject
     public Sprite icon = null;              // Item icon
     public bool isDefaultItem = false;      // Is the item default wear?
 
+    public GameObject worldPrefab;
     // Called when the item is pressed in the inventory
     public virtual void Use()
     {

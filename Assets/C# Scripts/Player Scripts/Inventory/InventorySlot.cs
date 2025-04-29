@@ -8,6 +8,8 @@ public class InventorySlot : MonoBehaviour
 
     public Image icon;          // Reference to the Icon image
     public Button removeButton; // Reference to the remove button
+    public GameObject itemDropPrefab;
+    public Transform dropPoint;
 
     Item item;  // Current item in the slot
 
@@ -24,8 +26,12 @@ public class InventorySlot : MonoBehaviour
     // Clear the slot
     public void ClearSlot()
     {
-        item = null;
+        if (item != null && item.worldPrefab != null)
+        {
+            Instantiate(item.worldPrefab, dropPoint.position, Quaternion.identity);
+        }
 
+        item = null;
         icon.sprite = null;
         icon.enabled = false;
         removeButton.interactable = false;

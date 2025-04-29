@@ -64,4 +64,34 @@ public class Inventory : MonoBehaviour
         if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
     }
+
+    public int GetItemCount(Item item)
+    {
+        int count = 0;
+        foreach (Item i in items)
+        {
+            if (i == item)
+                count++;
+        }
+        return count;
+    }
+
+    // Removes multiple of the same item
+    public void RemoveMultiple(Item item, int amount)
+    {
+        int removed = 0;
+
+        for (int i = items.Count - 1; i >= 0 && removed < amount; i--)
+        {
+            if (items[i] == item)
+            {
+                items.RemoveAt(i);
+                removed++;
+            }
+        }
+
+        if (onItemChangedCallback != null)
+            onItemChangedCallback.Invoke();
+    }
+
 }
