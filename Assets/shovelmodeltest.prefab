@@ -286,7 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   interactionTransform: {fileID: 6863459244264337003}
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 116fe0fdcc7a83744a17966f908f62be, type: 2}
 --- !u!1 &7278746593207459736
 GameObject:
   m_ObjectHideFlags: 0

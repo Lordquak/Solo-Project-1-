@@ -26,9 +26,13 @@ public class InventorySlot : MonoBehaviour
     // Clear the slot
     public void ClearSlot()
     {
-        if (item != null && item.worldPrefab != null)
+
+        if (item != null)
         {
-            Instantiate(item.worldPrefab, dropPoint.position, Quaternion.identity);
+            if (item.worldPrefab != null)
+                Instantiate(item.worldPrefab, dropPoint.position, Quaternion.identity);
+            else
+                Debug.LogWarning(item.name + " has no worldPrefab assigned!");
         }
 
         item = null;
