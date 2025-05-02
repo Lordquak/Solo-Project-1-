@@ -9,7 +9,7 @@ public class MenuManager : MonoBehaviour
     public GameObject Panel;
     public void StartGame()
     {
-        SceneManager.LoadScene("TestScene"); // Replace with your actual scene name
+        SceneManager.LoadScene("MainGameScene"); // Replace with your actual scene name
         
     }
 
