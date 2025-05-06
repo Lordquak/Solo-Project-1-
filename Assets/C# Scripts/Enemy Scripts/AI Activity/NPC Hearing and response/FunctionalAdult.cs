@@ -32,10 +32,10 @@ public class FunctionalAdult : MonoBehaviour, IHear
         {
             MoveTo(sound.pos);
 
-            /*if (npcWander != null)  // Check if NPCWander is assigned
+            if (npcWander != null)  // Check if NPCWander is assigned
             {
-                npcWander.enabled = false;  // Disable wandering
-            }*/
+                //npcWander.enabled = false;  // Disable wandering
+            }
 
 
         }

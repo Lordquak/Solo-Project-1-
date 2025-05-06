@@ -19,13 +19,13 @@ namespace Game
         }
 
         [SerializeField]
-        float maxWaitTime = 3f;
+        float maxWaitTime = 2f;
 
         [SerializeField]
-        float maxWaitTimeRandom = 5f;
+        float maxWaitTimeRandom = 4f;
 
         [Space(15f)]
-        float maxWanderTime = 5f;
+        float maxWanderTime = 6f;
 
         //float currentMaxWaitTime = 3f;
 
