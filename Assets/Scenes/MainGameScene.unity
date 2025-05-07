@@ -7968,6 +7968,7 @@ GameObject:
   - component: {fileID: 693612982}
   - component: {fileID: 693612983}
   - component: {fileID: 693612984}
+  - component: {fileID: 693612985}
   m_Layer: 11
   m_Name: Enemy
   m_TagString: Untagged
@@ -8166,6 +8167,20 @@ MonoBehaviour:
   waitTime: 0
   state: 0
   wanderTime: 10
+--- !u!114 &693612985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693612972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915ecc0fb9213cb44b8a365561eb542c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeathField: 2
+  sceneToLoad: GameOverScene
 --- !u!1 &734101709 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4767400413853537203, guid: 4f5dbb8a13ee87248a827c56edae5421, type: 3}

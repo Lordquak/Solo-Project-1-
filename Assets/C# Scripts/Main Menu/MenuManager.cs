@@ -12,6 +12,11 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("MainGameScene"); // Replace with your actual scene name
         
     }
+    public void OpenMenu()
+    {
+        SceneManager.LoadScene("MainMenu"); // Replace with your actual scene name
+
+    }
 
     public void OpenOptions()
     {
