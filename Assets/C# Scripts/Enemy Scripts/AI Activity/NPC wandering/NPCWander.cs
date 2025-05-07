@@ -25,7 +25,7 @@ namespace Game
         float maxWaitTimeRandom = 4f;
 
         [Space(15f)]
-        float maxWanderTime = 6f;
+        float maxWanderTime = 10f;
 
         //float currentMaxWaitTime = 3f;
 
@@ -37,7 +37,7 @@ namespace Game
         EState state = EState.Wandering;
 
         [SerializeField]
-        private float wanderTime = 0f;
+        private float wanderTime = 10f;
 
 
 
