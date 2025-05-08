@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HeadbobSystem : MonoBehaviour {
 	
-	[Range(0.001f, 0.01f)]
+	[Range(0.001f, 0.02f)]
 	public float Amount = 0.002f;
 	
 	[Range(1f, 30f)] 

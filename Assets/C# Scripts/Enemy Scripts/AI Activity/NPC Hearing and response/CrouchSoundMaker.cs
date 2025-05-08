@@ -15,7 +15,7 @@ namespace GamePlay
 
         [SerializeField] private Sound.SoundType soundType = Sound.SoundType.Danger;
 
-        [SerializeField] private LayerMask groundLayer;
+        [SerializeField] public LayerMask groundLayer;
 
         private void OnDrawGizmosSelected()
         {

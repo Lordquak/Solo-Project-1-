@@ -7,8 +7,10 @@ using UnityEngine.XR;
 namespace Game
 
 {
+    
     public class NPCWander : NPCComponent
     {
+        [SerializeField] private NavMeshAgent agent = null;
 
         public Area Area;
 
@@ -83,6 +85,7 @@ namespace Game
 
                 if (state == EState.Wandering)
                 {
+                    agent.speed = 6.5f;
                     npc.Agent.isStopped = false;
 
                     SetRandomDestination();

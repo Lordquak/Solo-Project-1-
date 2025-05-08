@@ -11,49 +11,69 @@ public class FunctionalAdult : MonoBehaviour, IHear
     [SerializeField] private NavMeshAgent agent = null;
     [SerializeField] private NPCWander npcWander = null; // Reference to NPCWander script
 
-    [SerializeField, Tooltip("How far away, in meters, the agent will run from danger.")] 
+    [SerializeField, Tooltip("How far away, in meters, the agent will run from danger.")]
     private float displacementFromDanger = 10f;
+    private Vector3 targetPos;
+    private bool isMovingToTarget = false;
 
-    void Awake() 
+    void Awake()
     {
-        if (agent == null && !TryGetComponent(out agent))        
-            Debug.LogWarning(name + " doesn't have an agent!");        
+        if (agent == null && !TryGetComponent(out agent))
+            Debug.LogWarning(name + " doesn't have an agent!");
     }
 
     public void RespondToSound(Sound sound)
     {
-        /* 
-        *   Put fun things here
-        *   Examples:
-        *   Animate the NPC, Play a sound clip ("What was that?!"), Throw some UI up, Check if the sound is more important than current task
-        */
-
         if (sound.soundType == Sound.SoundType.Interesting)
         {
-            MoveTo(sound.pos);
+            // Move to the sound position
+            targetPos = sound.pos;
+            MoveTo(targetPos);
 
-            if (npcWander != null)  // Check if NPCWander is assigned
-            {
-                //npcWander.enabled = false;  // Disable wandering
-            }
+            agent.speed = 13f;
 
+            // Disable NPC wandering while responding to sound
+            npcWander.enabled = false;
 
+            // Track that we are moving to a target
+            isMovingToTarget = true;
         }
-
-        else if (sound.soundType == Sound.SoundType.Danger) //Must have this case so that it doesn't run away from the default sound type
+        else
         {
-            Vector3 dir = (sound.pos - transform.position).normalized;
-            MoveTo(transform.position - (dir * displacementFromDanger));
+           
+            // Enable wandering for other sound types
+            npcWander.enabled = true;
+            
         }
-        //else will do nothing in the case of Sounds with Default sound type
     }
 
-    private void MoveTo(Vector3 pos) 
+    private void MoveTo(Vector3 pos)
     {
-        
+        // Set the destination for the NavMeshAgent
         agent.SetDestination(pos);
-        agent.isStopped = false;
+        agent.isStopped = false; // Ensure the agent is moving
     }
 
-    
+    void Update()
+    {
+        // Check if we are moving to the target position
+        if (isMovingToTarget)
+        {
+            // Check if the NPC has reached the destination
+            if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+            {
+                // If agent has stopped moving (destination reached)
+                if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+                {
+                    // Re-enable NPCWander once we reach the destination
+                    npcWander.enabled = true;
+
+                    // Stop checking movement
+                    isMovingToTarget = false;
+                }
+            }
+        }
+
+
+    }
 }
