@@ -1,5 +1,5 @@
 
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -10,8 +10,7 @@ namespace Game.NavigationTutorial
     {
         private void Update()
         {
-            npc.Animator.SetFloat("Spee", npc.CurrentSpeed);
+            npc.Animator.SetFloat("Speed", npc.CurrentSpeed);
         }
     }
 }
-*/
