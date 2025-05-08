@@ -3,7 +3,92 @@ guid: cfe37398cb4e7874997de471313b8759
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: bc6766a444fb2114cabcd7038f9ca5e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 9a668452251f98e44a565d98dba561ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skelle1
+    second: {fileID: 2100000, guid: 50d5f496a8b80d34d93eac52b0eb7e9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skelle1.001
+    second: {fileID: 2100000, guid: 5399e1c5c1e38d940b8333aee44d154b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: 99f4ddc61e973724f92e44c6d1b2cfa4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2.001
+    second: {fileID: 2100000, guid: 461883b77403c674c954dfb6aa99abe1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert5
+    second: {fileID: 2100000, guid: 6de5e4c554b405d46a1c9527f05865be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plastered_stone_wall.001
+    second: {fileID: 2100000, guid: a24408010f479ee48a2a567903faa07d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plastered_stone_wall.003
+    second: {fileID: 2100000, guid: 04f2d9b0d9e8879459905893a6f3e043, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stonething
+    second: {fileID: 2100000, guid: 830452cfc5176a84fb92a8f94cd79419, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: camp psd
+    second: {fileID: 2800000, guid: 5e7394ef2739a7e45ac58fddd169d718, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dirt
+    second: {fileID: 2800000, guid: be338380329d38f4cbafddb724f12770, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: plastered_stone_wall_diff_4k
+    second: {fileID: 2800000, guid: d2c79a27eff9f9245a13e226c5388e2f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: plastered_stone_wall_nor_gl_4k
+    second: {fileID: 2800000, guid: 60c2b51ecb406cb44805e1059d4488c4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: plastered_stone_wall_rough_4k
+    second: {fileID: 2800000, guid: a8466a6e1c938fe489bf8ed2c6b1e911, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: skeleton
+    second: {fileID: 2800000, guid: 5183f130e0237a04b862a718019c7d07, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: temp tree tex
+    second: {fileID: 2800000, guid: 03a952e9c177df44c85fa4db896d87bf, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
