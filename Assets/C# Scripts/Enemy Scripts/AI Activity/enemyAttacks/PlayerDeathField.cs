@@ -18,7 +18,7 @@ public class PlayerDeathField : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, GetComponent<SphereCollider>().radius);
+        Gizmos.DrawWireSphere(transform.position, GetComponent<CapsuleCollider>().radius);
     }
 
 
