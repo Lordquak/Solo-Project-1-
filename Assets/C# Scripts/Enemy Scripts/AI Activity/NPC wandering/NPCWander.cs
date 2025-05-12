@@ -62,7 +62,7 @@ namespace Game
             {
                 waitTime -= Time.deltaTime;
 
-                if (waitTime < 0f)
+                if (waitTime < 0.5f)
                 {
                     ChangeState(EState.Wandering);
                 }
