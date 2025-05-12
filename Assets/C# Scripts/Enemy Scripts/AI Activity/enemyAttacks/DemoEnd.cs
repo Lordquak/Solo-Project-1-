@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerDeathField : MonoBehaviour
+public class DemoEnd : MonoBehaviour
 {
-    [SerializeField] private string sceneToLoad = "GameOverScene";
+    [SerializeField] private string sceneToLoad = "MainMenu";
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,11 +18,6 @@ public class PlayerDeathField : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, GetComponent<CapsuleCollider>().radius);
-    }
-
-
+    
 }
+

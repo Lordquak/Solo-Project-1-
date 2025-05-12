@@ -9,7 +9,7 @@ public class MenuManager : MonoBehaviour
     public GameObject Panel;
     public void StartGame()
     {
-        SceneManager.LoadScene("MainGameScene"); // Replace with your actual scene name
+        SceneManager.LoadScene("Videoscene"); // Replace with your actual scene name
         
     }
     public void OpenMenu()
