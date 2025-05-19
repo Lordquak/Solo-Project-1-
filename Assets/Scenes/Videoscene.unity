@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 6328177}
-  sceneToLoad: MainGameScene
+  sceneToLoad: Script test scene
 --- !u!1 &1732856957
 GameObject:
   m_ObjectHideFlags: 0
