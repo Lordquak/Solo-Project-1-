@@ -205,7 +205,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -222,9 +222,10 @@ GameObject:
   - component: {fileID: 6863459244264337003}
   - component: {fileID: 888884593736224155}
   - component: {fileID: 3987482116646227244}
+  - component: {fileID: 2750933113526185312}
   m_Layer: 10
   m_Name: shovelmodeltest
-  m_TagString: Untagged
+  m_TagString: Shovel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,7 +238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6303476569000726035}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.430407, y: 6.3399687, z: 21.981554}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -271,7 +272,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &3987482116646227244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,6 +288,27 @@ MonoBehaviour:
   radius: 3
   interactionTransform: {fileID: 6863459244264337003}
   item: {fileID: 11400000, guid: 116fe0fdcc7a83744a17966f908f62be, type: 2}
+--- !u!65 &2750933113526185312
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6303476569000726035}
+  m_Material: {fileID: 13400000, guid: b403c4c9fc7c057469dcac05c0f21a33, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.31048775, y: 0.5690812, z: 0.10723576}
+  m_Center: {x: 0.01, y: -0.015138283, z: -0.012783052}
 --- !u!1 &7278746593207459736
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +337,7 @@ Transform:
   m_GameObject: {fileID: 7278746593207459736}
   serializedVersion: 2
   m_LocalRotation: {x: -0.000000037748947, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00045013428, y: 0.78100014, z: -0.0049743652}
+  m_LocalPosition: {x: 0.00045013428, y: 0.08, z: -0.0049743652}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
