@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DemoEnd : MonoBehaviour
 {
-    [SerializeField] private string sceneToLoad = "MainMenu";
+    [SerializeField] private string sceneToLoad = "FinalVideoscene";
 
     private void OnTriggerEnter(Collider other)
     {
