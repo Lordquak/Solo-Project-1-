@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Script test scene.unity
     guid: 684763002fbf9e94090bf04cefc27815
+  - enabled: 1
+    path: Assets/Scenes/FinalVideoscene.unity
+    guid: 4ebb9adf780867140a857882a9763578
   m_configObjects: {}
